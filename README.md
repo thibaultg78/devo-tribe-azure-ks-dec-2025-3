@@ -1,4 +1,4 @@
-# Knowledge Sharing (KS) session
+# Knowledge Sharing (KS) session - Devoteam
 
 - Devoteam M Cloud
 - Tribe Azure

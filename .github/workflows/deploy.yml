@@ -24,12 +24,12 @@ jobs:
       
       - name: Login to Azure Container Registry
         run: |
-          az acr login --name acrdevoteamdemo3
+          az acr login --name acrdevoteamdemo
       
       - name: Build and push image to ACR
         run: |
           az acr build \
-            --registry acrdevoteamdemo3 \
+            --registry acrdevoteamdemo \
             --image devo-tribe-azure-ks-dec-2025:${{ github.sha }} \
             --image devo-tribe-azure-ks-dec-2025:latest \
             --file Dockerfile \
@@ -40,8 +40,8 @@ jobs:
           az container create \
             --resource-group RG-Thibault \
             --name devo-tribe-azure-ks-dec-2025 \
-            --image acrdevoteamdemo3.azurecr.io/devo-tribe-azure-ks-dec-2025:latest \
-            --registry-login-server acrdevoteamdemo3.azurecr.io \
+            --image acrdevoteamdemo.azurecr.io/devo-tribe-azure-ks-dec-2025:latest \
+            --registry-login-server acrdevoteamdemo.azurecr.io \
             --registry-username ${{ secrets.AZURE_CLIENT_ID }} \
             --registry-password ${{ secrets.AZURE_CLIENT_SECRET }} \
             --dns-name-label devo-tribe-azure-ks-dec-2025 \

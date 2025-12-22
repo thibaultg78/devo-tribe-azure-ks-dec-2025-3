@@ -6,6 +6,8 @@
 
 # How you can try by yourself ⬇️
 
+<img width="1425" height="741" alt="image" src="https://github.com/user-attachments/assets/36ed4541-5415-4441-91ed-4b349bcf978a" />
+
 Below are the commands I used for the demo.
 
 1. Build de votre image Docker

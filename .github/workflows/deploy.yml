@@ -41,7 +41,7 @@ jobs:
       - name: Deploy to Azure Container Instances
         run: |
           az container create \
-            --resource-group RG-Thibault \
+            --resource-group RG-Thibault-Gibard \
             --name devo-tribe-azure-ks-dec-2025 \
             --image acrdevoteamdemo.azurecr.io/devo-tribe-azure-ks-dec-2025:latest \
             --registry-login-server acrdevoteamdemo.azurecr.io \
